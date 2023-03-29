@@ -48,8 +48,6 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         unit_sp_first.setAdapter(aa);
         unit_sp_sec.setAdapter(aa);
 
-        //input_val = Integer.parseInt(in_val.getText().toString());
-
         result_val = Integer.parseInt(res_val.getText().toString());
 
             in_val.addTextChangedListener(new TextWatcher() {
@@ -67,92 +65,67 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
                     else if (unit_sp_first.getSelectedItem().toString() == "meter") {
                         if (unit_sp_sec.getSelectedItem().toString() == "mile") {
                             meterToMiles();
-                            res_val.setText(String.valueOf(result_val));
                         } else if (unit_sp_sec.getSelectedItem().toString() == "yard") {
                             meterToYard();
-                            res_val.setText(String.valueOf(result_val));
                         } else if (unit_sp_sec.getSelectedItem().toString() == "foot") {
                             meterToFoot();
-                            res_val.setText(String.valueOf(result_val));
                         } else if (unit_sp_sec.getSelectedItem().toString() == "inch") {
                             meterToInch();
-                            res_val.setText(String.valueOf(result_val));
                         } else if (unit_sp_sec.getSelectedItem().toString() == "meter") {
                             sameUnit();
-                            res_val.setText(String.valueOf(result_val));
                         }
                     }
 
                     else if (unit_sp_first.getSelectedItem().toString() == "mile") {
                         if (unit_sp_sec.getSelectedItem().toString() == "mile") {
                             sameUnit();
-                            res_val.setText(String.valueOf(result_val));
                         } else if (unit_sp_sec.getSelectedItem().toString() == "yard") {
                             mileToYard();
-                            res_val.setText(String.valueOf(result_val));
                         } else if (unit_sp_sec.getSelectedItem().toString() == "foot") {
                             mileToFoot();
-                            res_val.setText(String.valueOf(result_val));
                         } else if (unit_sp_sec.getSelectedItem().toString() == "inch") {
                             mileToInch();
-                            res_val.setText(String.valueOf(result_val));
                         } else if (unit_sp_sec.getSelectedItem().toString() == "meter") {
                             mileToMeter();
-                            res_val.setText(String.valueOf(result_val));
                         }
                     }
                     else if (unit_sp_first.getSelectedItem().toString() == "yard") {
                         if (unit_sp_sec.getSelectedItem().toString() == "mile") {
                             yardToMile();
-                            res_val.setText(String.valueOf(result_val));
                         } else if (unit_sp_sec.getSelectedItem().toString() == "yard") {
                             sameUnit();
-                            res_val.setText(String.valueOf(result_val));
                         } else if (unit_sp_sec.getSelectedItem().toString() == "foot") {
                             yardToFoot();
-                            res_val.setText(String.valueOf(result_val));
                         } else if (unit_sp_sec.getSelectedItem().toString() == "inch") {
                             yardToInch();
-                            res_val.setText(String.valueOf(result_val));
                         } else if (unit_sp_sec.getSelectedItem().toString() == "meter") {
                             yardToMeter();
-                            res_val.setText(String.valueOf(result_val));
                         }
                     }
                     else if (unit_sp_first.getSelectedItem().toString() == "foot") {
                         if (unit_sp_sec.getSelectedItem().toString() == "mile") {
                             footToMile();
-                            res_val.setText(String.valueOf(result_val));
                         } else if (unit_sp_sec.getSelectedItem().toString() == "yard") {
                             footToYard();
-                            res_val.setText(String.valueOf(result_val));
                         } else if (unit_sp_sec.getSelectedItem().toString() == "foot") {
                             sameUnit();
-                            res_val.setText(String.valueOf(result_val));
                         } else if (unit_sp_sec.getSelectedItem().toString() == "inch") {
                             footToInch();
-                            res_val.setText(String.valueOf(result_val));
                         } else if (unit_sp_sec.getSelectedItem().toString() == "meter") {
                             footToMeter();
-                            res_val.setText(String.valueOf(result_val));
                         }
                     }
                     else if (unit_sp_first.getSelectedItem().toString() == "inch") {
                         if (unit_sp_sec.getSelectedItem().toString() == "mile") {
                             inchToMile();
-                            res_val.setText(String.valueOf(result_val));
                         } else if (unit_sp_sec.getSelectedItem().toString() == "yard") {
                             inchToYard();
-                            res_val.setText(String.valueOf(result_val));
                         } else if (unit_sp_sec.getSelectedItem().toString() == "foot") {
                             inchToFoot();
-                            res_val.setText(String.valueOf(result_val));
                         } else if (unit_sp_sec.getSelectedItem().toString() == "inch") {
                             sameUnit();
-                            res_val.setText(String.valueOf(result_val));
                         } else if (unit_sp_sec.getSelectedItem().toString() == "meter") {
                             inchToMeter();
-                            res_val.setText(String.valueOf(result_val));
                         }
                     }
                 }
@@ -162,6 +135,20 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
                 }
             });
 
+            res_val.addTextChangedListener(new TextWatcher() {
+                @Override
+                public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+                }
+
+                @Override
+                public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+                }
+
+                @Override
+                public void afterTextChanged(Editable editable) {
+                }
+            });
 
     }
 
@@ -171,92 +158,68 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         if (unit_sp_first.getSelectedItem().toString() == "meter") {
             if (unit_sp_sec.getSelectedItem().toString() == "mile") {
                 meterToMiles();
-                res_val.setText(String.valueOf(result_val));
             } else if (unit_sp_sec.getSelectedItem().toString() == "yard") {
                 meterToYard();
-                res_val.setText(String.valueOf(result_val));
             } else if (unit_sp_sec.getSelectedItem().toString() == "foot") {
                 meterToFoot();
-                res_val.setText(String.valueOf(result_val));
             } else if (unit_sp_sec.getSelectedItem().toString() == "inch") {
                 meterToInch();
-                res_val.setText(String.valueOf(result_val));
             } else if (unit_sp_sec.getSelectedItem().toString() == "meter") {
                 sameUnit();
-                res_val.setText(String.valueOf(result_val));
             }
         }
 
         else if (unit_sp_first.getSelectedItem().toString() == "mile") {
             if (unit_sp_sec.getSelectedItem().toString() == "mile") {
                 sameUnit();
-                res_val.setText(String.valueOf(result_val));
             } else if (unit_sp_sec.getSelectedItem().toString() == "yard") {
                 mileToYard();
-                res_val.setText(String.valueOf(result_val));
             } else if (unit_sp_sec.getSelectedItem().toString() == "foot") {
                 mileToFoot();
-                res_val.setText(String.valueOf(result_val));
             } else if (unit_sp_sec.getSelectedItem().toString() == "inch") {
                 mileToInch();
-                res_val.setText(String.valueOf(result_val));
             } else if (unit_sp_sec.getSelectedItem().toString() == "meter") {
                 mileToMeter();
-                res_val.setText(String.valueOf(result_val));
             }
         }
         else if (unit_sp_first.getSelectedItem().toString() == "yard") {
             if (unit_sp_sec.getSelectedItem().toString() == "mile") {
                 yardToMile();
-                res_val.setText(String.valueOf(result_val));
             } else if (unit_sp_sec.getSelectedItem().toString() == "yard") {
                 sameUnit();
-                res_val.setText(String.valueOf(result_val));
             } else if (unit_sp_sec.getSelectedItem().toString() == "foot") {
                 yardToFoot();
-                res_val.setText(String.valueOf(result_val));
             } else if (unit_sp_sec.getSelectedItem().toString() == "inch") {
                 yardToInch();
-                res_val.setText(String.valueOf(result_val));
             } else if (unit_sp_sec.getSelectedItem().toString() == "meter") {
                 yardToMeter();
-                res_val.setText(String.valueOf(result_val));
+
             }
         }
         else if (unit_sp_first.getSelectedItem().toString() == "foot") {
             if (unit_sp_sec.getSelectedItem().toString() == "mile") {
                 footToMile();
-                res_val.setText(String.valueOf(result_val));
             } else if (unit_sp_sec.getSelectedItem().toString() == "yard") {
                 footToYard();
-                res_val.setText(String.valueOf(result_val));
             } else if (unit_sp_sec.getSelectedItem().toString() == "foot") {
                 sameUnit();
-                res_val.setText(String.valueOf(result_val));
             } else if (unit_sp_sec.getSelectedItem().toString() == "inch") {
                 footToInch();
-                res_val.setText(String.valueOf(result_val));
             } else if (unit_sp_sec.getSelectedItem().toString() == "meter") {
                 footToMeter();
-                res_val.setText(String.valueOf(result_val));
             }
         }
         else if (unit_sp_first.getSelectedItem().toString() == "inch") {
             if (unit_sp_sec.getSelectedItem().toString() == "mile") {
                 inchToMile();
-                res_val.setText(String.valueOf(result_val));
             } else if (unit_sp_sec.getSelectedItem().toString() == "yard") {
                 inchToYard();
-                res_val.setText(String.valueOf(result_val));
             } else if (unit_sp_sec.getSelectedItem().toString() == "foot") {
                 inchToFoot();
-                res_val.setText(String.valueOf(result_val));
             } else if (unit_sp_sec.getSelectedItem().toString() == "inch") {
                 sameUnit();
-                res_val.setText(String.valueOf(result_val));
             } else if (unit_sp_sec.getSelectedItem().toString() == "meter") {
                 inchToMeter();
-                res_val.setText(String.valueOf(result_val));
             }
         }
 
@@ -268,86 +231,107 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
 
     public void sameUnit(){
         result_val = Integer.parseInt(in_val.getText().toString());
+        res_val.setText(String.valueOf(result_val));
     }
 
     public void meterToMiles(){
         result_val = Integer.parseInt(in_val.getText().toString()) / miles;
+        res_val.setText(String.valueOf(result_val));
     }
 
     public void meterToYard(){
         result_val = Integer.parseInt(in_val.getText().toString()) * yard;
+        res_val.setText(String.valueOf(result_val));
     }
 
     public void meterToFoot(){
         result_val = Integer.parseInt(in_val.getText().toString()) * foot;
+        res_val.setText(String.valueOf(result_val));
     }
 
     public void meterToInch(){
         result_val = Integer.parseInt(in_val.getText().toString()) * inch;
+        res_val.setText(String.valueOf(result_val));
     }
 
     public void mileToMeter(){
         result_val = Integer.parseInt(in_val.getText().toString()) * miles;
+        res_val.setText(String.valueOf(result_val));
     }
 
     public void mileToYard(){
         result_val = Integer.parseInt(in_val.getText().toString()) * mile_to_yard;
+        res_val.setText(String.valueOf(result_val));
     }
 
     public void mileToFoot(){
         result_val = Integer.parseInt(in_val.getText().toString()) * mile_to_foot;
+        res_val.setText(String.valueOf(result_val));
     }
 
     public void mileToInch(){
         result_val = Integer.parseInt(in_val.getText().toString()) * mile_to_inch;
+        res_val.setText(String.valueOf(result_val));
     }
 
     public void yardToMile(){
         result_val = Integer.parseInt(in_val.getText().toString()) / mile_to_yard;
+        res_val.setText(String.valueOf(result_val));
     }
 
     public void yardToFoot(){
         result_val = Integer.parseInt(in_val.getText().toString()) * yard_to_foot;
+        res_val.setText(String.valueOf(result_val));
     }
 
     public void yardToInch(){
         result_val = Integer.parseInt(in_val.getText().toString()) * yard_to_inch;
+        res_val.setText(String.valueOf(result_val));
     }
 
     public void yardToMeter(){
         result_val = Integer.parseInt(in_val.getText().toString()) / yard;
+        res_val.setText(String.valueOf(result_val));
     }
 
     public void footToMile(){
         result_val = Integer.parseInt(in_val.getText().toString()) / mile_to_foot;
+        res_val.setText(String.valueOf(result_val));
     }
 
     public void footToYard(){
         result_val = Integer.parseInt(in_val.getText().toString()) / yard_to_foot;
+        res_val.setText(String.valueOf(result_val));
     }
 
     public void footToInch(){
         result_val = Integer.parseInt(in_val.getText().toString()) * foot_to_inch;
+        res_val.setText(String.valueOf(result_val));
     }
 
     public void footToMeter(){
         result_val = Integer.parseInt(in_val.getText().toString()) / foot;
+        res_val.setText(String.valueOf(result_val));
     }
 
     public void inchToMile(){
         result_val = Integer.parseInt(in_val.getText().toString()) / mile_to_inch;
+        res_val.setText(String.valueOf(result_val));
     }
 
     public void inchToYard(){
         result_val = Integer.parseInt(in_val.getText().toString()) / yard_to_inch;
+        res_val.setText(String.valueOf(result_val));
     }
 
     public void inchToFoot(){
         result_val = Integer.parseInt(in_val.getText().toString()) / foot_to_inch;
+        res_val.setText(String.valueOf(result_val));
     }
 
     public void inchToMeter(){
         result_val = Integer.parseInt(in_val.getText().toString()) / inch;
+        res_val.setText(String.valueOf(result_val));
     }
 
 }
